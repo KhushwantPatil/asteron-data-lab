@@ -1,0 +1,268 @@
+ASTERON DATA LAB — 200 SQL PROBLEMS
+====================================
+
+Use these in order. Problems 1–100 are the core curriculum. Problems 101–200 are the second level.
+
+RULES
+-----
+1. Try each problem yourself first.
+2. Inspect the data before assuming what a column means.
+3. Be suspicious of totals.
+4. Do not assume every invoice, order, customer mapping, or status is valid.
+5. Save useful queries.
+6. For business questions, write a one-line conclusion after the SQL result.
+
+AVAILABLE TABLES
+----------------
+erp_customers
+erp_products
+erp_suppliers
+erp_orders
+erp_order_items
+finance_invoices
+finance_payments
+erp_returns
+wms_inventory_monthly
+crm_accounts
+crm_opportunities
+legacy_customer_master_2022
+crm_sales_reps
+erp_warehouses
+
+SECTION 1 — SQL FOUNDATIONS
+---------------------------
+1. Show all rows and columns from erp_customers.
+2. Show only customer_id, customer_name, city, state, and region.
+3. Return the first 20 customers.
+4. List all unique regions.
+5. List all unique industries.
+6. Find all customers located in Pune.
+7. Find all customers in Maharashtra.
+8. Find all customers in either Pune or Mumbai.
+9. Find all customers not in Maharashtra.
+10. Find customers whose customer_size is Large or Enterprise.
+11. Find customers whose credit_days are greater than 45.
+12. Find customers with credit_days between 30 and 60.
+13. Find customers whose name starts with A.
+14. Find customers whose name contains Engineering.
+15. Find customers created after 2025-01-01.
+16. Sort customers by credit_limit_lakh descending.
+17. Return the 25 customers with the highest credit limits.
+18. Show products where list_price is greater than 500.
+19. Show products where material is SS304 or SS316.
+20. Find Hex Bolts and sort by list_price descending.
+
+SECTION 2 — AGGREGATION
+-----------------------
+21. Count total customers.
+22. Count customers by region.
+23. Count customers by industry.
+24. Count customers by customer_size.
+25. Calculate average credit_days.
+26. Calculate average credit_days by customer_size.
+27. Find minimum, maximum, and average product list_price.
+28. Calculate average product price by category.
+29. Count products by category.
+30. Count suppliers by country.
+31. Count orders by order_status.
+32. Count orders by order_channel.
+33. Count orders by year.
+34. Count orders by month.
+35. Calculate total quantity ordered.
+36. Calculate gross sales value using quantity * unit_price.
+37. Calculate gross profit per line using quantity * (unit_price - unit_cost_at_order).
+38. Calculate total gross profit.
+39. Calculate average discount_pct.
+40. Find the 10 categories with the highest average list_price.
+
+SECTION 3 — TIME ANALYSIS
+-------------------------
+41. Calculate monthly order count.
+42. Calculate monthly invoice count.
+43. Calculate monthly invoice subtotal.
+44. Calculate monthly invoice_total.
+45. Compare subtotal versus invoice_total by month.
+46. Calculate annual invoice subtotal.
+47. Calculate year-over-year revenue growth.
+48. Find the month with highest invoiced revenue.
+49. Find the month with lowest revenue after 2022.
+50. Calculate monthly average invoice value.
+51. Calculate quarterly revenue.
+52. Calculate revenue by year and quarter.
+53. Compare each month of 2025 with the same month of 2024.
+54. Calculate a 3-month rolling average of monthly revenue.
+55. Calculate cumulative revenue over time.
+56. Find months where revenue fell more than 10% from previous month.
+57. Find every month that set a new all-time revenue high.
+58. Compare monthly order count with monthly invoice count.
+59. Find months where order volume rose but revenue fell.
+60. Calculate monthly gross margin percentage.
+
+SECTION 4 — JOINS
+-----------------
+61. Join orders with customers to show order_id, order_date, customer_name, city, region.
+62. Join order_items with products to show product_name and category.
+63. Join orders, order_items, and products.
+64. Calculate total order value per order.
+65. Calculate total order value per customer.
+66. Find top 20 customers by order value.
+67. Calculate invoiced revenue by region.
+68. Calculate invoiced revenue by state.
+69. Calculate invoiced revenue by city.
+70. Calculate invoiced revenue by industry.
+71. Calculate invoiced revenue by customer_size.
+72. Calculate invoiced revenue by salesperson.
+73. Calculate gross profit by product category.
+74. Calculate gross margin percentage by product category.
+75. Find the 20 products generating highest gross profit.
+
+SECTION 5 — CUSTOMER ANALYSIS
+-----------------------------
+76. Find customers who never placed an order.
+77. Find customers with at least 10 orders.
+78. Calculate each customer's first order date.
+79. Calculate each customer's latest order date.
+80. Calculate days since latest order using 2026-07-31.
+81. Find customers inactive for more than 180 days.
+82. Calculate revenue per customer.
+83. Calculate average order value per customer.
+84. Rank customers by revenue within each region.
+85. Find top 5 customers in every region.
+86. Calculate each customer's percentage contribution to total revenue.
+87. Find customers responsible for the top 80% of revenue.
+88. Compare Large + Enterprise revenue with all other customers.
+89. Calculate repeat-customer rate by year.
+90. Find customers whose 2026 revenue declined versus 2025.
+
+SECTION 6 — RETURNS AND FINANCE
+-------------------------------
+91. Count returns by return_reason.
+92. Calculate return quantity by product category.
+93. Calculate return rate by product.
+94. Find 20 products with highest return rate.
+95. Calculate return rate by supplier.
+96. Calculate return rate by month.
+97. Find suppliers whose return rates increased sharply after March 2025.
+98. Find invoices with no payment records.
+99. Calculate total amount paid per invoice.
+100. Calculate outstanding amount per invoice.
+
+SECTION 7 — FINANCE EXTENSION
+-----------------------------
+101. Find partially paid invoices.
+102. Find invoices paid after customer credit terms.
+103. Calculate average payment delay by customer_size.
+104. Calculate average payment delay by region.
+105. Find 20 customers with largest outstanding balances.
+106. Calculate monthly cash collected.
+107. Compare monthly invoiced revenue against cash collected.
+108. Find months with unusually weak collections.
+109. Estimate Days Sales Outstanding.
+110. Find customers that frequently pay late.
+
+SECTION 8 — DATA QUALITY
+------------------------
+111. Find duplicate customer names in ERP.
+112. Find duplicate account names in CRM.
+113. Find CRM accounts where erp_customer_id is blank.
+114. Find CRM accounts whose erp_customer_id does not exist in ERP.
+115. Compare CRM account names against ERP names where IDs match.
+116. Find likely duplicate CRM accounts.
+117. Find order items with quantity = 0.
+118. Find suspicious unit prices far above normal for the same product.
+119. Find invoices where invoice_total is not approximately subtotal + tax_amount.
+120. Find reversed invoices.
+121. Calculate revenue including versus excluding reversed invoices.
+122. Quantify the difference.
+123. Find orders with no invoice.
+124. Find invoices pointing to missing orders.
+125. Find payments pointing to missing invoices.
+126. Find returns pointing to missing order items.
+127. Find inconsistent or suspicious UOM values.
+128. Find discounts above 40%.
+129. Find customers with unusually high credit limits for their size.
+130. Find inconsistent state labels in CRM.
+
+SECTION 9 — ADVANCED SQL
+------------------------
+131. Use a CTE to calculate monthly revenue.
+132. Use multiple CTEs to calculate monthly revenue and gross profit.
+133. Use ROW_NUMBER to rank customers by revenue.
+134. Use RANK to rank products by gross profit.
+135. Use DENSE_RANK to rank salespeople by revenue.
+136. Use LAG to calculate month-over-month revenue change.
+137. Use LEAD to show each customer's next order date.
+138. Calculate days between consecutive orders.
+139. Calculate average reorder interval per customer.
+140. Find customers whose reorder interval increased materially.
+141. Calculate running total revenue.
+142. Calculate rolling 3-month revenue.
+143. Calculate rolling 6-month gross margin.
+144. Calculate each product's contribution to category revenue.
+145. Calculate each region's contribution to company revenue.
+146. Find each customer's highest-spend month.
+147. Find best-selling product in each region.
+148. Find highest-margin product in each category.
+149. Classify invoices into Small, Medium, Large, Very Large using CASE.
+150. Create customer value bands with CASE.
+
+SECTION 10 — INVENTORY
+----------------------
+151. Calculate average qty_on_hand by warehouse.
+152. Calculate average stockout_days by warehouse.
+153. Find products with most stockout days.
+154. Find warehouses with worst stockout performance.
+155. Calculate stockout days by month.
+156. Find months where stockout days increased sharply.
+157. Find products with both stockouts and declining sales.
+158. Compare sales before, during, and after stockout periods.
+159. Find products where qty_on_hand is below reorder_point.
+160. Calculate percentage of inventory records below reorder point.
+161. Find products repeatedly below reorder point.
+162. Find products with high qty_on_order but still high stockout_days.
+163. Compare West-region stockouts in early 2026 versus 2025.
+164. Find products most affected by West-region stockouts.
+165. Estimate possible lost revenue during stockout-heavy periods.
+
+SECTION 11 — CRM
+----------------
+166. Count opportunities by stage.
+167. Calculate opportunity value by stage.
+168. Calculate overall win rate.
+169. Calculate win rate by lead_source.
+170. Calculate win rate by region.
+171. Calculate win rate by industry.
+172. Calculate pipeline value by salesperson.
+173. Rank salespeople by total won opportunity value.
+174. Compare monthly lead-generation volume.
+175. Find lead sources with high volume but poor conversion.
+176. Find lead sources with low volume but high conversion.
+177. Compare CRM opportunity trends with ERP revenue trends.
+178. Find reps with strong CRM activity but weak actual revenue.
+179. Find reps with low opportunity volume but strong revenue.
+180. Calculate average opportunity size by lead source.
+
+SECTION 12 — ANALYST INVESTIGATIONS
+-----------------------------------
+181. Management says: "Revenue is growing, but profitability is getting worse." Prove or disprove.
+182. Management says: "Nagpur has become weak." Determine whether this is true and when it began.
+183. Finance says: "Your revenue number is wrong." Build a defensible revenue definition.
+184. Sales says: "We are winning more business." Compare CRM wins with invoiced revenue.
+185. Operations says: "Stockouts are hurting us." Quantify the effect.
+186. Procurement says: "Supplier quality is fine." Investigate supplier-level returns over time.
+187. Find whether any supplier had a structural jump in return rates.
+188. Identify which products drove that change.
+189. Determine whether customers reduced future ordering after product returns.
+190. Find customers whose revenue fell more than 30% year over year.
+191. Determine whether declines are concentrated by region, industry, or rep.
+192. Find reps whose portfolios depend heavily on a few customers.
+193. Identify the company's highest-risk customer concentration.
+194. Find categories where revenue rises but margin percentage falls.
+195. Find regions where discounting increased materially.
+196. Determine whether higher discounts are producing higher order volumes.
+197. Find customers receiving high discounts but producing poor gross margin.
+198. Find products with high revenue, weak margins, and high returns.
+199. Identify the five most important operational problems hidden in the data.
+200. Produce a final SQL-based management summary covering revenue, margin, regions, customers, products, returns, stockouts, collections, and next actions.
+
+END

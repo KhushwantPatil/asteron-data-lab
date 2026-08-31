@@ -1,0 +1,22 @@
+# Raw Asteron datasets
+Data/*.csv
+
+# Keep sample datasets
+!Data/Sample/*.csv
+
+# Jupyter temporary files
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# Anaconda/Jupyter metadata
+anaconda_projects/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment files
+.env
+
+# Power BI temporary files
+*.tmp

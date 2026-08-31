@@ -1,0 +1,169 @@
+ASTERON DATA LAB — PYTHON / PANDAS — 150 PROBLEMS
+==================================================
+Prerequisite: Complete enough SQL that joins, grouping, filtering, and business metrics feel normal.
+
+PHASE 1 — PYTHON BASICS
+1. Load erp_customers.csv with pandas.
+2. Display first 10 rows.
+3. Display last 10 rows.
+4. Show shape of the DataFrame.
+5. List column names.
+6. Inspect dtypes.
+7. Use info() to inspect missing values.
+8. Generate descriptive statistics.
+9. Select customer_id and customer_name.
+10. Filter Pune customers.
+11. Filter Maharashtra customers.
+12. Filter Large and Enterprise customers.
+13. Sort customers by credit limit.
+14. Find unique industries.
+15. Count customers by region.
+16. Calculate average credit days by size.
+17. Load products.
+18. Find products above a chosen price threshold.
+19. Count products by category.
+20. Calculate average list price by category.
+
+PHASE 2 — CLEANING
+21. Profile missing values across CRM accounts.
+22. Find duplicate CRM account names.
+23. Normalize whitespace in account names.
+24. Normalize capitalization.
+25. Compare ERP and CRM state labels.
+26. Standardize obvious state-label variants.
+27. Find blank ERP customer IDs in CRM.
+28. Find invalid ERP IDs.
+29. Detect zero-quantity order lines.
+30. Detect extreme unit prices.
+31. Calculate product-level price distributions.
+32. Use IQR to flag price outliers.
+33. Compare suspicious prices against product medians.
+34. Find inconsistent UOM values.
+35. Validate invoice subtotal + tax against total.
+36. Flag reversed invoices.
+37. Detect duplicate rows.
+38. Create a reusable data-quality report.
+39. Export flagged records to CSV.
+40. Write functions for common validation checks.
+
+PHASE 3 — MERGING / ANALYSIS
+41. Merge orders with customers.
+42. Merge order items with products.
+43. Build a complete order-line analytical DataFrame.
+44. Calculate line revenue.
+45. Calculate line gross profit.
+46. Calculate margin percentage.
+47. Aggregate revenue by customer.
+48. Aggregate revenue by region.
+49. Aggregate revenue by product.
+50. Aggregate gross profit by category.
+51. Find top 20 customers.
+52. Find top 20 products.
+53. Calculate customer revenue contribution.
+54. Identify customers forming 80% of revenue.
+55. Calculate monthly revenue.
+56. Calculate monthly gross profit.
+57. Calculate monthly margin percentage.
+58. Calculate year-over-year growth.
+59. Calculate month-over-month growth.
+60. Build rolling 3-month revenue.
+
+PHASE 4 — TIME SERIES / BUSINESS ANALYSIS
+61. Parse all date columns correctly.
+62. Create year/month/quarter fields.
+63. Compare yearly sales.
+64. Compare quarterly sales.
+65. Compare same-month YoY performance.
+66. Find largest monthly revenue declines.
+67. Find new all-time-high months.
+68. Calculate customer first-order date.
+69. Calculate customer last-order date.
+70. Calculate recency.
+71. Calculate frequency.
+72. Calculate monetary value.
+73. Build an RFM table.
+74. Segment customers using RFM.
+75. Analyze revenue by RFM segment.
+76. Calculate customer reorder intervals.
+77. Detect customers whose reorder interval is worsening.
+78. Identify inactive customers.
+79. Identify customers with >30% YoY decline.
+80. Investigate Nagpur performance over time.
+
+PHASE 5 — RETURNS / FINANCE / INVENTORY
+81. Analyze returns by reason.
+82. Calculate return rate by product.
+83. Calculate return rate by supplier.
+84. Plot supplier return rates over time.
+85. Detect suppliers with abrupt return-rate changes.
+86. Identify affected products.
+87. Measure customer behavior after returns.
+88. Calculate paid amount per invoice.
+89. Calculate outstanding balances.
+90. Identify partially paid invoices.
+91. Calculate payment delay.
+92. Analyze payment delay by customer segment.
+93. Identify chronically late-paying customers.
+94. Calculate monthly collections.
+95. Compare collections with invoices.
+96. Analyze stockout days by warehouse.
+97. Analyze stockouts by product.
+98. Compare stockouts against sales.
+99. Estimate possible stockout-related lost sales.
+100. Produce an operations-risk table.
+
+PHASE 6 — VISUALIZATION IN PYTHON
+101. Plot monthly revenue.
+102. Plot monthly gross margin.
+103. Plot revenue by region.
+104. Plot top customer concentration.
+105. Plot category revenue.
+106. Plot supplier return rates.
+107. Plot warehouse stockouts.
+108. Plot monthly collections vs invoices.
+109. Create a customer revenue histogram.
+110. Create a discount vs margin scatter plot.
+111. Choose appropriate charts for 10 business questions.
+112. Avoid misleading axes/scales.
+113. Create readable labels and titles.
+114. Build one executive-ready chart.
+115. Export charts for reports.
+
+PHASE 7 — AUTOMATION / REUSABLE ANALYSIS
+116. Write a function returning monthly revenue.
+117. Write a function for customer performance.
+118. Write a function for product performance.
+119. Write a function generating a data-quality summary.
+120. Create configuration variables instead of hardcoding dates.
+121. Split analysis into reusable Python modules.
+122. Add logging.
+123. Add error handling.
+124. Read database credentials from environment variables.
+125. Connect Python to PostgreSQL.
+126. Query PostgreSQL into pandas.
+127. Parameterize SQL queries.
+128. Write cleaned results back to PostgreSQL.
+129. Schedule a local analysis script.
+130. Generate a repeatable monthly management dataset.
+
+PHASE 8 — ANALYST INVESTIGATIONS
+131. Reproduce your SQL revenue analysis in Python.
+132. Check whether Python and SQL totals agree.
+133. Investigate discrepancies.
+134. Build a reusable revenue validation pipeline.
+135. Investigate margin erosion.
+136. Investigate Nagpur decline.
+137. Investigate supplier quality.
+138. Investigate stockout impact.
+139. Investigate late payments.
+140. Investigate customer concentration.
+141. Find three correlations worth investigating.
+142. Explain why correlation does not prove causation.
+143. Find five anomalies without being told where they are.
+144. Create a management summary DataFrame.
+145. Export a management-ready Excel/CSV pack.
+146. Turn one investigation into a Jupyter notebook case study.
+147. Refactor notebook code into scripts.
+148. Document assumptions and metric definitions.
+149. Re-run the entire analysis from raw files.
+150. Produce three business findings management should act on.
